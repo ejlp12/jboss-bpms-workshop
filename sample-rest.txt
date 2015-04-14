@@ -1,0 +1,623 @@
+GET ALL REPOSITORIES
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/repositories'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fb41900aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fb41900aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/repositories HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=cZVv-yM50iZAEb8Kymz01stR; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=ZDmHCDNcjN5W-zSj+ADEGx-I; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 17:07:03 GMT
+< 
+* Connection #0 to host localhost left intact
+[{"name":"rewards","description":null,"userName":null,"password":null,"requestType":null,"gitURL":"git://rewards"},{"name":"repository1","description":null,"userName":null,"password":null,"requestType":null,"gitURL":"git://repository1"}]
+
+GET ALL ORGANIZATIONAL UNITS
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/organizationalunits/'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7f8aa300aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7f8aa300aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/organizationalunits/ HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=qjwaZVH7l5D0+3IUm-yX2cls; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=UrJVYGVCHTxejds7+aKTn0g8; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 17:21:30 GMT
+< 
+* Connection #0 to host localhost left intact
+[{"name":"Demos","description":null,"owner":"admin","repositories":["rewards"]},{"name":"example","description":null,"owner":"example@jbpm.org","repositories":["repository1"]}]
+
+GET ALL DEPLOYMENTS
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/deployment/'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fb2ac00aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fb2ac00aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/deployment/ HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=+gMxRlwaAmFdZq93iXi-Rivb; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=rcZiew+MumDZvNpCxO+7XOdO; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 17:24:16 GMT
+< 
+* Connection #0 to host localhost left intact
+{"deploymentUnitList":[{"groupId":"com.redhat.jboss.hr","artifactId":"rewards","version":"1.0","kbaseName":"","ksessionName":"","strategy":"SINGLETON","identifier":"com.redhat.jboss.hr:rewards:1.0","status":"DEPLOYED"}]}
+
+GET A DEPLOYMENT DETAIL
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/deployment/com.redhat.jboss.hr:rewards:1.0'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7f7ffc80aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7f7ffc80aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/deployment/com.redhat.jboss.hr:rewards:1.0 HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=c2OdhSE+kk9BwRSt0Kf0JEDQ; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=DN5TIl76ts994-TPIPfz8b27; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 04:01:17 GMT
+< 
+* Connection #0 to host localhost left intact
+{"groupId":"com.redhat.jboss.hr","artifactId":"rewards","version":"1.0","kbaseName":"","ksessionName":"","strategy":"SINGLETON","identifier":"com.redhat.jboss.hr:rewards:1.0","status":"DEPLOYED"}
+
+GET A PROCESS (DEFINITION) DETAIL INFO OF A PARTICULAR DEPLOYMENT ID
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fc8c280aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fc8c280aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> POST /business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=+bFyc4FJIY5uppJx7mxYIlr0; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=JKFAK5bLXhw3wifLGD-frR0q; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 20:37:43 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":"SUCCESS","url":"http://localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start","index":null,"commandName":null,"processId":"rewards.rewards-approval","id":2,"state":1,"eventTypes":[]}
+
+GET A PROCESS INSTANCE BY PROCESS INSTANCE ID
+==================================================================================================================================================================
+
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/instance/1'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7f950180aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7f950180aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/instance/1 HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=i57wHZ25JP-R-nB8s0Ji4-4h; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=roLK8SYd--aFImRyreXcDVBn; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 20:29:28 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":null,"url":null,"index":null,"commandName":null,"processId":"rewards.rewards-approval","id":1,"state":1,"eventTypes":[]}
+
+GET A PROCESS INSTANCE AND ITS VARIABLES BY PROCESS INSTANCE ID
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/withvars/process/instance/1/'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fd751803000
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fd751803000) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/withvars/process/instance/1/ HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=idbjrp+6kMpPFCHDYUQbrg8l; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=aeLHnusq96UXSGYI8Ni3JPFs; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 20:32:45 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":"SUCCESS","url":"http://localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/withvars/process/instance/1/","variables":{"employee":"com.redhat.jboss.hr.rewards.Employee@56321434"},"processInstance":{"status":null,"url":null,"index":null,"commandName":null,"processId":"rewards.rewards-approval","id":1,"state":1,"eventTypes":[]}}
+
+START PROCESS INSTANCE BY ITS ID
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fda3980aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fda3980aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> POST /business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=6xba0xeclFpeY-khcGTLUGYG; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=un6wJCNDpORyE8PkH7NExR1i; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 03:20:10 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":"SUCCESS","url":"http://localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start","index":null,"commandName":null,"processId":"rewards.rewards-approval","id":4,"state":1,"eventTypes":[]}
+
+GET ALL INSTANCES (HISTORY) INCLUDING RUNNING INSTANCES
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instances'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fd3db00aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fd3db00aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/history/instances HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=rOutUkjc4pSRdVUJQuEx5hrm; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=Nwm-JXFIN9omDadlsVh20goZ; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 03:33:29 GMT
+< 
+{"historyLogList":[{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":4,"processInstanceId":4,"processId":"rewards.rewards-approval","start":1413948009989,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":4,"processInstanceId":4,"processId":"rewards.rewards-approval","start":1413948009989,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}}],"index":null,"commandName":null,"list":[{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":* Connection #0 to host localhost left intact
+"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":4,"processInstanceId":4,"processId":"rewards.rewards-approval","start":1413948009989,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":4,"processInstanceId":4,"processId":"rewards.rewards-approval","start":1413948009989,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}}]}
+
+GET ALL INSTANCES (HISTORY) with paging
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instances?p=1&s=3'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fe4ab00aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fe4ab00aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/history/instances?p=1&s=3 HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=SOEWvSRHtJUFVgEJ6m9A1soT; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=evjNz+PEpIAAw96qB7nMwAic; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 03:57:37 GMT
+< 
+{"historyLogList":[{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}}],"index":null,"commandName":null,"list":[{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":1,"processInstanceId":1,"processId":"rewards.rewards-approval","start":1413908944333,"end":1413944331913,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":35387580,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":2,"processInstanceId":2,"processId":"rewards.rewards-approval","start":1413923863524,"end":1413944335689,"status":3,"parentProcessInstanceId":null,"outcome":null,"duration":20472165,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}},{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbProcessInstanceLog":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","* Connection #0 to host localhost left intact
+processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":3,"processInstanceId":3,"processId":"rewards.rewards-approval","start":1413944419499,"end":null,"status":1,"parentProcessInstanceId":null,"outcome":null,"duration":null,"identity":"bpmsAdmin","processVersion":"1.0","processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0"}}}]}
+
+GET ALL TASKS AVAILABLE
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7ff0a300aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7ff0a300aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/task/query HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=11xVfPblxSvS4FAtMoOO9VIB; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=tsz7Ux9ybSwmO9SMIjmIKm5N; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 21 Oct 2014 20:35:46 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":null,"url":null,"index":null,"commandName":null,"list":[{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":1,"name":"Approve reward","subject":"","description":"","status":"Ready","priority":0,"skipable":true,"actualOwnerId":null,"createdById":null,"createdOn":1413908944398,"activationTime":1413908944398,"expirationTime":null,"processInstanceId":1,"processId":"rewards.rewards-approval","processSessionId":2,"potentialOwners":null,"actualOwner":null,"createdBy":null}]}
+
+GET ALL TASKS AVAILABLE (example: 2 records result)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7f8758803000
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7f8758803000) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/task/query HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=k-APhGv55l7XowhZrf9z4tHd; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=1r1InqcD4ap287LmOca-gSOm; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 02:23:13 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":null,"url":null,"index":null,"commandName":null,"list":[{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":3,"name":"Test new task","subject":null,"description":null,"status":"Completed","priority":0,"skipable":false,"actualOwnerId":"bpmsAdmin","createdById":null,"createdOn":1413941212781,"activationTime":null,"expirationTime":1414720800000,"processInstanceId":-1,"processId":null,"processSessionId":0,"potentialOwners":null,"actualOwner":{"id":"bpmsAdmin"},"createdBy":null},{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":4,"name":"Approve reward","subject":"","description":"","status":"Ready","priority":0,"skipable":true,"actualOwnerId":null,"createdById":null,"createdOn":1413944419512,"activationTime":1413944419512,"expirationTime":null,"processInstanceId":3,"processId":"rewards.rewards-approval","processSessionId":3,"potentialOwners":null,"actualOwner":null,"createdBy":null}]}
+
+GET ALL TASKS AVAILABLE (example: 3 records result)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fba2480aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fba2480aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/task/query HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=fPDc1gWtaltsjyKD01iawjiM; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=BiPrUeWv4f9zztK9gLbp3llK; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 03:21:39 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":null,"url":null,"index":null,"commandName":null,"list":[{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":3,"name":"Test new task","subject":null,"description":null,"status":"Completed","priority":0,"skipable":false,"actualOwnerId":"bpmsAdmin","createdById":null,"createdOn":1413941212781,"activationTime":null,"expirationTime":1414720800000,"processInstanceId":-1,"processId":null,"processSessionId":0,"potentialOwners":null,"actualOwner":{"id":"bpmsAdmin"},"createdBy":null},{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":4,"name":"Approve reward","subject":"","description":"","status":"Ready","priority":0,"skipable":true,"actualOwnerId":null,"createdById":null,"createdOn":1413944419512,"activationTime":1413944419512,"expirationTime":null,"processInstanceId":3,"processId":"rewards.rewards-approval","processSessionId":3,"potentialOwners":null,"actualOwner":null,"createdBy":null},{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":5,"name":"Approve reward","subject":"","description":"","status":"Ready","priority":0,"skipable":true,"actualOwnerId":null,"createdById":null,"createdOn":1413948009993,"activationTime":1413948009993,"expirationTime":null,"processInstanceId":4,"processId":"rewards.rewards-approval","processSessionId":3,"potentialOwners":null,"actualOwner":null,"createdBy":null}]}
+
+GET ALL TASKS WHERE STATUS = Ready
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query?status=Ready'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7f98b400aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7f98b400aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/task/query?status=Ready HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=cKAmU7IMOZUnIxPdY0mdyvFz; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=4SrR268y-bBBUEy7wp8AKp-r; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 02:33:19 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":null,"url":null,"index":null,"commandName":null,"list":[{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":4,"name":"Approve reward","subject":"","description":"","status":"Ready","priority":0,"skipable":true,"actualOwnerId":null,"createdById":null,"createdOn":1413944419512,"activationTime":1413944419512,"expirationTime":null,"processInstanceId":3,"processId":"rewards.rewards-approval","processSessionId":3,"potentialOwners":null,"actualOwner":null,"createdBy":null}]}
+
+GET CONTENT OF A TASK
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/content/4'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7f825300aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7f825300aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/task/content/4 HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=3yCz4VMC-nVbliNqaeJs+W0+; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=ihYCOcVRn3-C+-ZEAk-ckiRX; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 02:30:06 GMT
+< 
+* Connection #0 to host localhost left intact
+{"id":4,"serializedContent":"rO0ABXoAAAJnCgYIBRAEGABKiAQIABJIb3JnLmRyb29scy5jb3JlLm1hcnNoYWxsaW5nLmltcGwuU2VyaWFsaXphYmxlUGxhY2Vob2xkZXJSZXNvbHZlclN0cmF0ZWd5GrkDrO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAAEdwQAAAAEc3IAJGNvbS5yZWRoYXQuamJvc3MuaHIucmV3YXJkcy5FbXBsb3llZQAAAAAAAAABAgADTAAFYXdhcmR0ACNMY29tL3JlZGhhdC9qYm9zcy9oci9yZXdhcmRzL0F3YXJkO0wABGRlcHR0ABJMamF2YS9sYW5nL1N0cmluZztMAARuYW1lcQB+AAR4cHNyACFjb20ucmVkaGF0Lmpib3NzLmhyLnJld2FyZHMuQXdhcmQAAAAAAAAAAQIAAkwABmFtb3VudHQAE0xqYXZhL2xhbmcvSW50ZWdlcjtMAAxleHBsYWluYXRpb25xAH4ABHhwc3IAEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAGR0AAhHb29kIGpvYnQAAklUdAAHZXJ5YW4xMnQADUFwcHJvdmVSZXdhcmR0AAR1c2VydAAOQXBwcm92ZSByZXdhcmR4UlIKFQoLZW1wbG95ZWVfaW4QABoEAAAAAAoSCghUYXNrTmFtZRAAGgQAAAABChEKB0dyb3VwSWQQABoEAAAAAgoSCghOb2RlTmFtZRAAGgQAAAAD","contentMap":null,"content":"rO0ABXoAAAJnCgYIBRAEGABKiAQIABJIb3JnLmRyb29scy5jb3JlLm1hcnNoYWxsaW5nLmltcGwuU2VyaWFsaXphYmxlUGxhY2Vob2xkZXJSZXNvbHZlclN0cmF0ZWd5GrkDrO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAAEdwQAAAAEc3IAJGNvbS5yZWRoYXQuamJvc3MuaHIucmV3YXJkcy5FbXBsb3llZQAAAAAAAAABAgADTAAFYXdhcmR0ACNMY29tL3JlZGhhdC9qYm9zcy9oci9yZXdhcmRzL0F3YXJkO0wABGRlcHR0ABJMamF2YS9sYW5nL1N0cmluZztMAARuYW1lcQB+AAR4cHNyACFjb20ucmVkaGF0Lmpib3NzLmhyLnJld2FyZHMuQXdhcmQAAAAAAAAAAQIAAkwABmFtb3VudHQAE0xqYXZhL2xhbmcvSW50ZWdlcjtMAAxleHBsYWluYXRpb25xAH4ABHhwc3IAEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAGR0AAhHb29kIGpvYnQAAklUdAAHZXJ5YW4xMnQADUFwcHJvdmVSZXdhcmR0AAR1c2VydAAOQXBwcm92ZSByZXdhcmR4UlIKFQoLZW1wbG95ZWVfaW4QABoEAAAAAAoSCghUYXNrTmFtZRAAGgQAAAABChEKB0dyb3VwSWQQABoEAAAAAgoSCghOb2RlTmFtZRAAGgQAAAAD"}
+
+
+CLAIM A TASK by user eryan
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u eryan 'localhost:8080/business-central/rest/task/4/claim'
+Enter host password for user 'eryan':
+* Adding handle: conn: 0x7fe2fa80aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fe2fa80aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'eryan'
+> POST /business-central/rest/task/4/claim HTTP/1.1
+> Authorization: Basic ZXJ5YW46UGFzc3cwcmQh
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=Z+5zfjw0Cj8ai7IYSzKC2fZU; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=irMH5e8wb2oKY9N9TvcrHddh; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 06:54:28 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":"SUCCESS","url":"http://localhost:8080/business-central/rest/task/4/claim","message":null}
+
+GET DETAIL OF TASK BY ID (See that the actualOwner value is eryan, after the assignment above)
+==================================================================================================================================================================
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query?taskId=4'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fb2d380aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fb2d380aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/task/query?taskId=4 HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=uMQILhcUPhjCoRtXWtP+QFaL; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=4vv6i1FZGh1BE+3gSZs7aMzY; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 09:23:40 GMT
+< 
+* Connection #0 to host localhost left intact
+{"status":null,"url":null,"index":null,"commandName":null,"list":[{"@class":"org.jbpm.services.task.impl.model.xml.JaxbTaskSummary","id":4,"name":"Approve reward","subject":"","description":"","status":"Reserved","priority":0,"skipable":true,"actualOwnerId":"eryan","createdById":null,"createdOn":1413944419512,"activationTime":1413944419512,"expirationTime":null,"processInstanceId":3,"processId":"rewards.rewards-approval","processSessionId":3,"potentialOwners":null,"actualOwner":{"id":"eryan"},"createdBy":null}]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********************************************************************************************************************************************************
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instance/4/variable'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7fdcba80aa00
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fdcba80aa00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/history/instance/4/variable HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=kS3-bBXIAR3UQzOJhDKJh8Lj; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=0R1hWZOFZOxmFiBjFLRwzS2x; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 10:03:02 GMT
+< 
+* Connection #0 to host localhost left intact
+{"historyLogList":[],"index":null,"commandName":null,"list":[]}
+
+
+Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instance/3/variable'
+Enter host password for user 'bpmsAdmin':
+* Adding handle: conn: 0x7febf1003000
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7febf1003000) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+* Server auth using Basic with user 'bpmsAdmin'
+> GET /business-central/rest/history/instance/3/variable HTTP/1.1
+> Authorization: Basic YnBtc0FkbWluOlBhc3N3MHJkIQ==
+> User-Agent: curl/7.30.0
+> Host: localhost:8080
+> Accept: application/json
+> 
+< HTTP/1.1 200 OK
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Set-Cookie: JSESSIONID=0Js8J3yP0s1TCw7ChPbfdJas; Path=/business-central
+< Set-Cookie: JSESSIONIDSSO=rFSf4P-hxp-ajIeqLwWy-40e; Path=/
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Wed, 22 Oct 2014 10:03:32 GMT
+< 
+* Connection #0 to host localhost left intact
+{"historyLogList":[{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbVariableInstanceLog":{"id":2,"processInstanceId":3,"processId":"rewards.rewards-approval","date":1413944419492,"variableInstanceId":"employee","variableId":"employee","value":"com.redhat.jboss.hr.rewards.Employee@4f07fd84","oldValue":"","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":2,"processInstanceId":3,"processId":"rewards.rewards-approval","date":1413944419492,"variableInstanceId":"employee","variableId":"employee","value":"com.redhat.jboss.hr.rewards.Employee@4f07fd84","oldValue":"","externalId":"com.redhat.jboss.hr:rewards:1.0"}}}],"index":null,"commandName":null,"list":[{"org.kie.services.client.serialization.jaxb.impl.audit.JaxbVariableInstanceLog":{"id":2,"processInstanceId":3,"processId":"rewards.rewards-approval","date":1413944419492,"variableInstanceId":"employee","variableId":"employee","value":"com.redhat.jboss.hr.rewards.Employee@4f07fd84","oldValue":"","externalId":"com.redhat.jboss.hr:rewards:1.0","index":null,"commandName":null,"result":{"id":2,"processInstanceId":3,"processId":"rewards.rewards-approval","date":1413944419492,"variableInstanceId":"employee","variableId":"employee","value":"com.redhat.jboss.hr.rewards.Employee@4f07fd84","oldValue":"","externalId":"com.redhat.jboss.hr:rewards:1.0"}}}]}
+
