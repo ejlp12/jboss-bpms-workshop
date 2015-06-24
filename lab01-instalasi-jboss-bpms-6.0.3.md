@@ -123,19 +123,15 @@ Perlu diperhatikan pada halaman tersebut adalah versi JDK yang didukung, jenis d
 
     Sekarang kita akan coba menambahkan user lain dengan role yang berbeda. JBoss BPM Suite, memiliki beberapa jenis role yaitu:
 
-    * Admin role - This role is meant to provide any user given it with full and complete access to all areas of the product.
+      * Admin role - This role is meant to provide any user given it with full and complete access to all areas of the product.
+      * Developer role - This role provides full access, except to the Administration perspective where you manage project and organizational setup.
+      * Analyst role - This role provides the same access as the Developer role, except for no access to the asset repository and deployments.
+      * User role - This is the role designed for the user of your system who is only allowed to manage processes, tasks that are generated for them, and view the created or provided reporting dashboards.
+      * Manger role - This is the most restrictive role where we allow the user to view Business Activity Monitoring data in the form of provided or created reporting dashboards.
+      
+      (dicopy dari: http://www.schabell.org/2014/05/redhat-jboss-bpmsuite-user-role-access.html)
 
-    * Developer role - This role provides full access, except to the Administration perspective where you manage project and organizational setup.
-
-    * Analyst role - This role provides the same access as the Developer role, except for no access to the asset repository and deployments.
-
-    * User role - This is the role designed for the user of your system who is only allowed to manage processes, tasks that are generated for them, and view the created or provided reporting dashboards.
-
-    * Manger role - This is the most restrictive role where we allow the user to view Business Activity Monitoring data in the form of provided or created reporting dashboards.
-
-    (dicopy dari: http://www.schabell.org/2014/05/redhat-jboss-bpmsuite-user-role-access.html)
-
-    Untuk membuat user baru, gunakan script add-user.sh (untuk Windows gunakan add-user.bat) 
+   Untuk membuat user baru, gunakan script add-user.sh (untuk Windows gunakan add-user.bat) 
     
     ```
     cd <JBOSS_BPMS_INSTALL_DIR>\jboss-eap-6.1\bin
