@@ -154,10 +154,10 @@ Perlu diperhatikan pada halaman tersebut adalah versi JDK yang didukung, jenis d
     What roles do you want this user to belong to? (Please enter a comma separated list, or leave blank for none)[  ]: developer
     About to add user 'mydev' for realm 'ApplicationRealm'
     Is this correct yes/no? yes
-    Added user 'mydev' to file '/Users/eariobow/Servers/BPMS_603/jboss-eap-6.1/standalone/configuration/application-users.properties'
-    Added user 'mydev' to file '/Users/eariobow/Servers/BPMS_603/jboss-eap-6.1/domain/configuration/application-users.properties'
-    Added user 'mydev' with roles developer to file '/Users/eariobow/Servers/BPMS_603/jboss-eap-6.1/standalone/configuration/application-roles.properties'
-    Added user 'mydev' with roles developer to file '/Users/eariobow/Servers/BPMS_603/jboss-eap-6.1/domain/configuration/application-roles.properties'
+    Added user 'mydev' to file '/Servers/BPMS_603/jboss-eap-6.1/standalone/configuration/application-users.properties'
+    Added user 'mydev' to file '/Servers/BPMS_603/jboss-eap-6.1/domain/configuration/application-users.properties'
+    Added user 'mydev' with roles developer to file '/Servers/BPMS_603/jboss-eap-6.1/standalone/configuration/application-roles.properties'
+    Added user 'mydev' with roles developer to file '/Servers/BPMS_603/jboss-eap-6.1/domain/configuration/application-roles.properties'
     Is this new user going to be used for one AS process to connect to another AS process?
     e.g. for a slave host controller connecting to the master or for a Remoting connection for server to server EJB calls.
     yes/no? yes
