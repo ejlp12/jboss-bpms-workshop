@@ -41,3 +41,9 @@ Instalasi JBos BPMS versi 6.1 sedikit berbeda dengan versi sebelumnya yaitu 6.0.
    ./standalone.sh -c standalone-full.xml
    ```
 
+> Abaikan kika saat menjalankan JBoss BPMS, di console muncul log seperti ini:
+> ```
+> 16:49:45,638 ERROR [stderr] (MSC service thread 1-3) ScriptEngineManager providers.next(): javax.script.ScriptEngineFactory: Provider apple.applescript.AppleScriptEngineFactory not found
+> 16:49:45,639 ERROR [stderr] (MSC service thread 1-3) ScriptEngineManager providers.next(): javax.script.ScriptEngineFactory: Provider com.sun.script.javascript.RhinoScriptEngineFactory not found
+> ```
+> Error tersebut muncul jika kita menggunakan JDK/JRE 1.8
