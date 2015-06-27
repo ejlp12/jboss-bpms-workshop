@@ -9,7 +9,7 @@
     Klik di submenu Organizational Unit > Manage Organizational Unit,
     Klik tombol Add di sebelah kanan dibawah list Organizational Units,
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392182/6c12336c-1d0b-11e5-8ba8-12e57146bbfd.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392323/48cda9f8-1d11-11e5-936d-5004ccaa6686.png)
     
     Masukan informasi mengenai Organizational Unit seperti contoh gambar dibawah ini, kemudian klik tombol [OK]
     
