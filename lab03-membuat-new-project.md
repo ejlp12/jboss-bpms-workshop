@@ -52,7 +52,7 @@
 
     atau pada klik submenu New Item > Project
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392438/50c6dcac-1d15-11e5-9b4b-f406ecf97ccf.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392477/59d6c0b8-1d16-11e5-82c5-d4c3d0dc3710.png)
     
     Beri nama new project: `policyquote`, lalu klik tombol [OK].
     
