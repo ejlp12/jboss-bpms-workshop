@@ -43,6 +43,8 @@ Untuk saat ini mari kita ubah konfigurasi agar tetap menggunakan database H2 den
     ```
     
     Lalu klik tombol [Test Connection] jika pesan sukses muncul, berarti koneksi ke H2 database berhasil dan kita bisa lanjutkan dengan mengklik tombol [Connect]
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8391298/e22aec24-1ce8-11e5-8f5a-f05cf1ca89a5.png)
 
 3.  Sekarang kita akan ubah konfigurasi JBoss EAP yang digunakan BPM Suite agar menggunakan database H2 yang sudah kita jalankan.
     Menggunakan aplikasi direktori eksplorer, masuklah ke direktori `<JBOSS_BHOME>/jboss-eap-6.1/standalone/configuration/`. Buka file `standalone.xml` dengan menggunakan text editor. Lalu edit bagian `connection-url` di elemen datasource. Sebelumnya value dari elemen tersebut adalah `jdbc:h2:mem:test;DB_CLOSE_DELAY=-1`. Kita perlu ganti value-nya menjadi seperti berikut:
