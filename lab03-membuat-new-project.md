@@ -29,7 +29,7 @@
     
     Lalu klik tombol [Create]. Kita akan lihat di window File Explorer sudah ada entry repository baru. Coba klik repository tersebut untuk melihat detail informasi
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392200/10503370-1d0c-11e5-8546-3e6d30715652.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392408/441e6e08-1d14-11e5-8ed4-326d2cc4e84b.png)
 
   > Catatan:JBoss BPM Suite menggunakan GIT sebagai tempat untuk menyimpan semua artifak (file-file) yang terkait dengan project Business Process maupun Business Rule yang akan kita buat. Default GIT directory yang digunakan JBoss BPM Suite letaknya ada di `<JBOSS_BPMS_INSTALL_DIR>/jboss-eap-6.1/.niogit`
 
