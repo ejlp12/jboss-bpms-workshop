@@ -46,9 +46,13 @@
     Klik menu Authoring > Project Authoring. Akan muncul Project Explorer view.
     Pastikan ada berada di organizational unit dan repository yang telah anda buat sebelumnya yaitu "acme / insurance"
     
-    Klik submenu New > Project.
+    Klik tombol "New Project" atau pada klik submenu New Item > Project.
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392205/53b3b434-1d0c-11e5-9f96-e34544ee2ac3.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392419/d4839d2e-1d14-11e5-9fa9-7a76c3aff539.png)
+
+    atau
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392438/50c6dcac-1d15-11e5-9b4b-f406ecf97ccf.png)
     
     Klik tombol [OK] lalu isi detail Project General Setting.
     
