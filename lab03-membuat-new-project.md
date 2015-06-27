@@ -9,11 +9,12 @@
     Klik di submenu Organizational Unit > Manage Organizational Unit,
     Klik tombol Add di sebelah kanan dibawah list Organizational Units,
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392323/48cda9f8-1d11-11e5-936d-5004ccaa6686.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392370/1485b1fc-1d13-11e5-89a4-fbb9e04759ab.png)
+    
     
     Masukan informasi mengenai Organizational Unit seperti contoh gambar dibawah ini, kemudian klik tombol [OK]
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392184/96b358bc-1d0b-11e5-9360-a77595605f1b.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392323/48cda9f8-1d11-11e5-936d-5004ccaa6686.png)
     
     Nama organizational unit yang baru akan masuk di list dengan nama "acme : jboss" dan kalau anda klik item tersebut, terlihat disebelah kanan windows list tidak ada repository yang dimiliki "acme : jboss"
 
@@ -24,7 +25,7 @@
     
     kemudian isikan Repository name dan pilih Organizational unit
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392199/ee9385de-1d0b-11e5-95a3-355abedbca04.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392393/beb501b4-1d13-11e5-902f-e84187214cbc.png)
     
     Lalu klik tombol [Create]. Kita akan lihat di window File Explorer sudah ada entry repository baru. Coba klik repository tersebut untuk melihat detail informasi
     
