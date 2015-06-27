@@ -1,4 +1,4 @@
- ## LAB3: Membuat Project Baru lewat Business Central
+## LAB3: Membuat Project Baru lewat Business Central
 
 1.  Login ke business central [http://localhost:8080/business-central/](http://localhost:8080/business-central/) dengan user `bpmsAdmin`
     
