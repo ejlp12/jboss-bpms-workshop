@@ -4,7 +4,7 @@
     
 2.  Klik menu Authoring > Administration
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8392180/4b1212ea-1d0b-11e5-95d8-3ce8dd3a3c36.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8392298/219b77c6-1d10-11e5-9e8b-850e91852931.png)
     
     Klik di submenu Organizational Unit > Manage Organizational Unit,
     Klik tombol Add di sebelah kanan dibawah list Organizational Units,
