@@ -110,7 +110,7 @@ Perlu diperhatikan pada halaman tersebut adalah versi JDK yang didukung, jenis d
     18:13:29,312 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss BPM Suite 6.0.3.GA (AS 7.2.1.Final-redhat-10) started in 103955ms - Started 669 of 741 services (71 services are passive or on-demand)
     ```
     
-    Coba akses dari browser URL berikut [http://localhost:8080/business-central](http://localhost:8080/business-central)
+6.  Coba akses dari browser URL berikut [http://localhost:8080/business-central](http://localhost:8080/business-central)
 
     Seharusnya anda mendapatkan screen login seperti ini:
 
@@ -121,15 +121,15 @@ Perlu diperhatikan pada halaman tersebut adalah versi JDK yang didukung, jenis d
     Login dengan username `bpmsAdmin` dan password seperti yang udah anda set pada saat instalasi. Setelah login anda akan mendapatkan tampilan seperti ini. Karena pengguna `bpmsAdmin` memiliki role `admin` yang mempunyai hak akses ke semua menu/aktifitas di aplikasi business-cental maka semua menu ditampilkan dan dapat diakses.
 
 
-    Sekarang kita akan coba menambahkan user lain dengan role yang berbeda. JBoss BPM Suite, memiliki beberapa jenis role yaitu:
+7.  Sekarang kita akan coba menambahkan user lain dengan role yang berbeda. JBoss BPM Suite, memiliki beberapa jenis role yaitu:
 
-      * Admin role - This role is meant to provide any user given it with full and complete access to all areas of the product.
-      * Developer role - This role provides full access, except to the Administration perspective where you manage project and organizational setup.
-      * Analyst role - This role provides the same access as the Developer role, except for no access to the asset repository and deployments.
-      * User role - This is the role designed for the user of your system who is only allowed to manage processes, tasks that are generated for them, and view the created or provided reporting dashboards.
-      * Manger role - This is the most restrictive role where we allow the user to view Business Activity Monitoring data in the form of provided or created reporting dashboards.
-      
-      (dicopy dari: http://www.schabell.org/2014/05/redhat-jboss-bpmsuite-user-role-access.html)
+    * admin role - This role is meant to provide any user given it with full and complete access to all areas of the product.
+    * developer role - This role provides full access, except to the Administration perspective where you manage project and organizational setup.
+    * analyst role - This role provides the same access as the Developer role, except for no access to the asset repository and deployments.
+    * user role - This is the role designed for the user of your system who is only allowed to manage processes, tasks that are generated for them, and view the created or provided reporting dashboards.
+    * manger role - This is the most restrictive role where we allow the user to view Business Activity Monitoring data in the form of provided or created reporting dashboards.
+    
+    (dicopy dari: http://www.schabell.org/2014/05/redhat-jboss-bpmsuite-user-role-access.html)
 
    Untuk membuat user baru, gunakan script add-user.sh (untuk Windows gunakan add-user.bat) 
     
@@ -164,7 +164,9 @@ Perlu diperhatikan pada halaman tersebut adalah versi JDK yang didukung, jenis d
     To represent the user add the following to the server-identities definition <secret value="UGFzc3cwcmQh" />
     ```
     
-    Buatlah beberapa user dengan role yang berbeda-beda, kemudian coba untuk login ke business-central.
+    > Role diatas adalah role yang sudah didefinisikan pada JBoss BPMS yang akan menentukan hak akses terhadap aksi yang bisa dilakukan di Business Central. Kita juga bisa mendefinisikan business role dan setiap user bisa memiliki beberapa role dengan cara menuliskannya menggunakan koma misalnya "user,hrd,interviewer" atau "user,finance-group,top-manager"
+    
+8. Buatlah beberapa user dengan role yang berbeda-beda, kemudian coba untuk login ke business-central.
 
-    Lab1: Instalasi JBoss BPM Suite 6.0.3 telah selesai.
-    Selanjutnya kita akan melakukan perubahan database yang digunakan oleh JBoss BPM Suite.
+> Lab1: Instalasi JBoss BPM Suite 6.0.3 telah selesai.
+> Selanjutnya kita akan melakukan perubahan database yang digunakan oleh JBoss BPM Suite.
