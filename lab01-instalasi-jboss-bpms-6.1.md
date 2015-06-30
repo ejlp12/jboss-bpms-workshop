@@ -33,6 +33,20 @@ Instalasi JBos BPMS versi 6.1 sedikit berbeda dengan versi sebelumnya yaitu 6.0.
     ```
     java -jar jboss-bpmsuite-6.1.0.GA-installer.jar -console
     ```
+    
+    Ikuti langkah demi langkah:
+    
+    1. Setujui License Agreement
+    2. Buat administrative user atau tidak, jika tidak maka administrative user akan menggunakan user admin yang sudah disetup saat instalasi JBoss EAP
+    3. Membuat Business Process Management Suite Admin User, user ini adalah user admin untuk BPM. Defaultnya akan bernama `bpmsAdmin`.
+    4. Set password untuk user `bpmsAdmin`
+    5. Penambahan additional roles that will be used for task management.  
+       These roles are custom named and used again when building your processes with human tasks.  Add your custom named roles in a comma separated list below.
+    6. Mengkonfigurasi Java Security Manager, pilih tidak untuk mempermudah 
+    7. Mengkonfigurasi IPv6 jika server hanya menggunakan IPv6, pilih tidak jika anda menggunakan IPv4
+    8. Pilih konfigurasi default atau advance, untuk mempermudah pilih saja "default"
+    
+    
 
 4.  Jalankan JBoss BPMS
 
