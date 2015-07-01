@@ -1,6 +1,6 @@
 GET ALL REPOSITORIES
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/repositories'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/repositories'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fb41900aa00
 * Adding handle: send: 0
@@ -32,7 +32,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL ORGANIZATIONAL UNITS
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/organizationalunits/'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/organizationalunits/'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7f8aa300aa00
 * Adding handle: send: 0
@@ -64,7 +64,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL DEPLOYMENTS
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/deployment/'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/deployment/'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fb2ac00aa00
 * Adding handle: send: 0
@@ -96,7 +96,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET A DEPLOYMENT DETAIL
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/deployment/com.redhat.jboss.hr:rewards:1.0'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/deployment/com.redhat.jboss.hr:rewards:1.0'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7f7ffc80aa00
 * Adding handle: send: 0
@@ -128,7 +128,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET A PROCESS (DEFINITION) DETAIL INFO OF A PARTICULAR DEPLOYMENT ID
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fc8c280aa00
 * Adding handle: send: 0
@@ -161,7 +161,7 @@ Enter host password for user 'bpmsAdmin':
 GET A PROCESS INSTANCE BY PROCESS INSTANCE ID
 ==================================================================================================================================================================
 
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/instance/1'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/instance/1'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7f950180aa00
 * Adding handle: send: 0
@@ -193,7 +193,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET A PROCESS INSTANCE AND ITS VARIABLES BY PROCESS INSTANCE ID
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/withvars/process/instance/1/'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/withvars/process/instance/1/'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fd751803000
 * Adding handle: send: 0
@@ -225,7 +225,7 @@ Enter host password for user 'bpmsAdmin':
 
 START PROCESS INSTANCE BY ITS ID
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/runtime/com.redhat.jboss.hr:rewards:1.0/process/rewards.rewards-approval/start'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fda3980aa00
 * Adding handle: send: 0
@@ -257,7 +257,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL INSTANCES (HISTORY) INCLUDING RUNNING INSTANCES
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instances'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instances'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fd3db00aa00
 * Adding handle: send: 0
@@ -289,7 +289,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL INSTANCES (HISTORY) with paging
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instances?p=1&s=3'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instances?p=1&s=3'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fe4ab00aa00
 * Adding handle: send: 0
@@ -321,7 +321,7 @@ processName":"rewards-approval","externalId":"com.redhat.jboss.hr:rewards:1.0","
 
 GET ALL TASKS AVAILABLE
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7ff0a300aa00
 * Adding handle: send: 0
@@ -353,7 +353,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL TASKS AVAILABLE (example: 2 records result)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7f8758803000
 * Adding handle: send: 0
@@ -385,7 +385,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL TASKS AVAILABLE (example: 3 records result)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fba2480aa00
 * Adding handle: send: 0
@@ -417,7 +417,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET ALL TASKS WHERE STATUS = Ready
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query?status=Ready'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query?status=Ready'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7f98b400aa00
 * Adding handle: send: 0
@@ -449,7 +449,7 @@ Enter host password for user 'bpmsAdmin':
 
 GET CONTENT OF A TASK
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/content/4'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/content/4'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7f825300aa00
 * Adding handle: send: 0
@@ -482,7 +482,7 @@ Enter host password for user 'bpmsAdmin':
 
 CLAIM A TASK by user eryan
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u eryan 'localhost:8080/business-central/rest/task/4/claim'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -X POST -H 'Accept: application/json' -u eryan 'localhost:8080/business-central/rest/task/4/claim'
 Enter host password for user 'eryan':
 * Adding handle: conn: 0x7fe2fa80aa00
 * Adding handle: send: 0
@@ -514,7 +514,7 @@ Enter host password for user 'eryan':
 
 GET DETAIL OF TASK BY ID (See that the actualOwner value is eryan, after the assignment above)
 ==================================================================================================================================================================
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query?taskId=4'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/task/query?taskId=4'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fb2d380aa00
 * Adding handle: send: 0
@@ -560,7 +560,7 @@ Enter host password for user 'bpmsAdmin':
 
 
 **********************************************************************************************************************************************************
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instance/4/variable'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instance/4/variable'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7fdcba80aa00
 * Adding handle: send: 0
@@ -591,7 +591,7 @@ Enter host password for user 'bpmsAdmin':
 {"historyLogList":[],"index":null,"commandName":null,"list":[]}
 
 
-Eryans-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instance/3/variable'
+ejlp12-MacBook-Pro:bin eariobow$ curl -v -H 'Accept: application/json' -u bpmsAdmin 'localhost:8080/business-central/rest/history/instance/3/variable'
 Enter host password for user 'bpmsAdmin':
 * Adding handle: conn: 0x7febf1003000
 * Adding handle: send: 0
