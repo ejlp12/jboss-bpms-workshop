@@ -28,3 +28,8 @@ Caused by: org.jboss.resteasy.client.ClientResponseFailure: Unable to find a Mes
 				   .useFormBasedAuth(true)
 				   .build();
 	```
+
+
+```
+sudo tcpdump -vv -X -i lo0 tcp port 8080
+```
