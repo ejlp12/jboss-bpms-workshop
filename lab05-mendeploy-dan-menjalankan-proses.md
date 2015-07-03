@@ -112,7 +112,7 @@ Project yang kita buat hanya memiliki satu Process Definition dengan nama **simp
     
     Setelah satu task diselesaikan, Task List tidak lagi menampilkan tas tersebut.
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8492681/a0817ee4-2177-11e5-80c1-7745a299bb5f.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8498029/70704110-21ac-11e5-946b-b70b60d2e30d.png)
     
 5.  Task yang sudah diselesaikan (Completed), dalam contoh Task dengan proses ID = 9,  hilang dari Task List dan proses akan berlanjut mengikuti jalur pada diagram process definition. 
     
