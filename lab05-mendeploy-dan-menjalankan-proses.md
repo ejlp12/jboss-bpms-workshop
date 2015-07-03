@@ -81,10 +81,6 @@ Project yang kita buat hanya memiliki satu Process Definition dengan nama **simp
     Tabel secara default menampilkan process instance yang dalam status "Active", kita dapat melihat instances dengan status lain dengen mengklik tombol disebelah tulisan "Showing"
 
     ![image](https://cloud.githubusercontent.com/assets/3068071/8496054/781e2d42-219c-11e5-98cb-9ad5f051f06a.png)
-    
-    
-
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8496054/781e2d42-219c-11e5-98cb-9ad5f051f06a.png)
 
     
 ### Melihat Daftar Task dan Mengeksekusi Task
@@ -113,6 +109,10 @@ Project yang kita buat hanya memiliki satu Process Definition dengan nama **simp
     ![image](https://cloud.githubusercontent.com/assets/3068071/8497270/0f37ecbe-21a6-11e5-9969-7188836bca56.png)
 
     Selain menyelesaikan (Complete) suatu task, task yang di klaim juga dapat di-unclaim (Release) atau di-Save yaitu field atau variabel output disimpan. Proses Save biasanya dilakukan jika kita sudah mengisi field yang diperlukan tapi belum selesai dan ingin menyelesaikannya nanti.
+    
+    Setelah satu task diselesaikan, Task List tidak lagi menampilkan tas tersebut.
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8492681/a0817ee4-2177-11e5-80c1-7745a299bb5f.png)
     
 5.  Task yang sudah diselesaikan (Completed), dalam contoh Task dengan proses ID = 9,  hilang dari Task List dan proses akan berlanjut mengikuti jalur pada diagram process definition. 
     
