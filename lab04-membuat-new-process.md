@@ -69,7 +69,7 @@ Process Definition tersebut akan memiliki dua form, form pertama adalah input da
     > Property Group berarti task ini nantinya dapat dilihat atau diklaim untuk kemudian dikerjakan oleh user yang memiliki group atau role `taskadmin`. Kita bisa definisikan beberapa group sekaligus dengan memisahkan menggunakan tanda koma, misalnya `taskadmin,hrd,finance`
     > Jika task ini ingin dapat dilihat atau diklaim oleh user tertentu maka anda perlu menset nilai dari properti **Actors**
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8491430/a1f84c9a-2162-11e5-9c50-417e38a9ed9e.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8491918/bd1d4bc0-216b-11e5-9223-412c00562557.png)
     
 13. Set "DataInputSet" untuk menambahkan variabel input yang dapat diterima oleh task tersebut DARI Process Definition.
     Buat dua varibel input dengan nama `in_name` dan `in_desc` lalu klik tombol Ok
