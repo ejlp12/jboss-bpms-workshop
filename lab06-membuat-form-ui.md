@@ -3,7 +3,7 @@
 1.  Kembali ke perspective Business Process modeling view, buka proses `simple_proc.bpmn2`.
     Lalu klik icon FORM seperti gambar berikut, dan pilih menu item "Generate all Forms"
 
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8498682/e8dbdd7e-21b3-11e5-9ce6-a2955aae073c.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8499884/467738ea-21c1-11e5-8325-e5cd3683de9e.png)
     
     Form UI akan di-_generate_ secara otomatis. Form yang akan dibuat adalah satu form  untuk proses bisnis, dan form untuk setiap task yang bertipe "User Task". Karena pada proses `simple_proc` hanya ada satu User task maka form yang akan di-generate adalah 2 form.
     
