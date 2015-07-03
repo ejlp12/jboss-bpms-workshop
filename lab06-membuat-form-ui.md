@@ -34,8 +34,34 @@
 6.  Save form 
 
     ![image](https://cloud.githubusercontent.com/assets/3068071/8499795/6c03aa36-21c0-11e5-96b2-b9689fb2cfa7.png)
-
     
+    Isi atau abaikan comment, klik tombol [Save]
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8499959/0d1d08e4-21c2-11e5-9e9d-0494ceaa7638.png)
+    
+    
+7.  Buka form `approve-data-taskform` dan edit sehingga form berbentuk seperti dibawah ini.
+
+    Pastikan juga field "Name" bersifat __Read Only_
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8499946/ec0dc148-21c1-11e5-8c56-6d709967efd2.png)
+    
+8.  Save form tersebut.
+
+9.  Klik tombol [Open Project Editor] di Project Explorer view, lalu pada Project Editor ubah field Version menjadi "1.1", lalu klik tombol [Save]
+
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8500103/48dc1752-21c3-11e5-87c7-3fb6be717d8b.png)
+
+10. Build & Deploy project tersebut dan jalankan Process Definition sehingga anda mendapatkan form input seperti berikut:
+
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8500207/13b9cb36-21c4-11e5-8abe-e473cffd93ee.png)
+    
+    dan form berikut saat mengerjakan task "Approve Data"
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8500225/4b479e8e-21c4-11e5-9c00-676807880a36.png)
+
+
+
    
     
     
