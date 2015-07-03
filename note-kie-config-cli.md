@@ -65,9 +65,9 @@ Available commands:
 
 Coba paling tidak perintah berikut
 
-  ```
-	 list-repo 
-	 list-org-units 
-	 list-deployment 
-	 exit
-	```
+```
+list-repo 
+list-org-units 
+list-deployment 
+exit
+```
