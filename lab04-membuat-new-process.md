@@ -65,6 +65,9 @@ Process Definition tersebut akan memiliki dua form, form pertama adalah input da
     
 12. Klik lagi node "Approve Data", set properties tabel sebagai berikut 
     Property "Groups" dengan nilai `taskadmin`
+
+    > Property Group berarti task ini nantinya dapat dilihat atau diklaim untuk kemudian dikerjakan oleh user yang memiliki group atau role `taskadmin`. Kita bisa definisikan beberapa group sekaligus dengan memisahkan menggunakan tanda koma, misalnya `taskadmin,hrd,finance`
+    > Jika task ini ingin dapat dilihat atau diklaim oleh user tertentu maka anda perlu menset nilai dari properti **Actors**
     
     ![image](https://cloud.githubusercontent.com/assets/3068071/8491430/a1f84c9a-2162-11e5-9c50-417e38a9ed9e.png)
     
