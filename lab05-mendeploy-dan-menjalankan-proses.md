@@ -6,7 +6,7 @@ Pada LAB ini kita akan belajar untuk melakukan deployment project dan juga menja
 
 1.  Buka project editor dengan mengklik tombol [Open Project Editor] di Project Explorer view
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8492407/5db11d8a-2173-11e5-82b1-abf618b0ede9.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8493319/bb35a994-2182-11e5-8072-4056301652fa.png)
 
 2.  Klik tombol Build  → [Build & Deploy]
 
