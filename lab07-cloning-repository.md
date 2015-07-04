@@ -151,4 +151,21 @@ Jika anda ingin meng-import repository dari GIT repository lain baik secara loka
 
     ![image](https://cloud.githubusercontent.com/assets/3068071/8507023/9ef241fa-225b-11e5-9170-fdcbd24c0938.png)
 
-4.
+    Jika berhasil, akan muncul notifikasi berikut
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8507139/32a19812-225f-11e5-9a87-dea33e1f6b87.png)
+    
+    dan repository hasil clone akan bisa anda lihat
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8507148/b9006bd6-225f-11e5-9bfd-541966bdd568.png)
+
+4.  Akses menu Authoring -> Project Authoring, pada Project Explorer ganti agar explorer menampilkan repository `latihan-clone` pada organization unit `example`.
+
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8507154/28e4ad9a-2260-11e5-9c32-f42d34b423d0.png)
+
+    Repository tersebut memiliki sebuah project dengan nama `basicproject` seperti terlihat dibawah ini. Untuk melihat aset dari project tersebut, klik icon [+] dan navigasikan menu tree menuju direktori `<default>, example, basicproject`
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8507164/c8b05a5e-2260-11e5-99f9-9fb6327b9838.png)
+
+Selesai, anda sudah bisa meng-clone repository dari dan ke JBoss BPM Suite.
+
