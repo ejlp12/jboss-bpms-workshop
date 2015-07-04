@@ -159,7 +159,11 @@ Jika anda ingin meng-import repository dari GIT repository lain baik secara loka
     
     ![image](https://cloud.githubusercontent.com/assets/3068071/8507148/b9006bd6-225f-11e5-9bfd-541966bdd568.png)
 
-4.  Akses menu Authoring -> Project Authoring, pada Project Explorer ganti agar explorer menampilkan repository `latihan-clone` pada organization unit `example`.
+4.  Akses menu Authoring -> Project Authoring, 
+
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8507202/d9fe35c8-2261-11e5-8948-c56b63ffa246.png)
+    
+    Pada Project Explorer ganti agar explorer menampilkan repository `latihan-clone` pada organization unit `example`.
 
     ![image](https://cloud.githubusercontent.com/assets/3068071/8507154/28e4ad9a-2260-11e5-9c32-f42d34b423d0.png)
 
