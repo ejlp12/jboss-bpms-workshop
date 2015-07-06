@@ -125,3 +125,10 @@ Using Java binary found at /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Con
 12:04:40.845 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1
 12:04:50.269 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1
 ```
+
+
+Detail informasi patch ini bisa dilihat di: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38283&product=bpm.suite&version=6.1.0&downloadType=patches
+
+Berikut daftar bug fixes ataupun changes pada versi 6.1.1:
+
+![image](https://cloud.githubusercontent.com/assets/3068071/8517279/75601300-23e9-11e5-9f43-b9b8dd763808.png)
