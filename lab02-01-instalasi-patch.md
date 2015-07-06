@@ -1,6 +1,9 @@
 ## Instalasi Patch JBoss BPM Suite 6.1.1
 
-Ekstrak `jboss-bpmsuite-6.1.1-patch.zip`
+1. Download patch file
+2. Ekstrak `jboss-bpmsuite-6.1.1-patch.zip`, misalnya di `/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch`
+3. Stop JBoss BPMS jika sedang jalan
+4. Lalu jalankan perintah berikut:
 
 ```
 cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
@@ -11,6 +14,7 @@ cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
 
 ```
 
+Berikut contoh output hasil perintah tersebut:
 
 ```
 ________________________________________________________________________________
