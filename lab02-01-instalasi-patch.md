@@ -1,18 +1,24 @@
 ## Instalasi Patch JBoss BPM Suite 6.1.1
 
-1. Download patch file
+Asumsi anda menginstall JBoss BPM Suite versi 6.1.0 di direktori `/Servers/BPMS-6.1/`, berikut langkah-langkah untuk menginstal patch **6.1.1**
+
+1. Download patch file dari http://access.redhat.com
 2. Ekstrak `jboss-bpmsuite-6.1.1-patch.zip`, misalnya di `/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch`
 3. Stop JBoss BPMS jika sedang jalan
 4. Lalu jalankan perintah berikut:
 
 ```
 cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-./apply-updates.sh /Servers/BPMS-6.1-NEW/standalone/deployments/business-central.war eap6.x-bc
-./apply-updates.sh /Servers/BPMS-6.1-NEW/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
-./apply-updates.sh /Servers/BPMS-6.1-NEW/standalone/deployments/kie-server.war generic-kie-server
-./apply-updates.sh /Servers/BPMS-6.1-NEW eap6.x
+./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/business-central.war eap6.x-bc
+./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
+./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/kie-server.war generic-kie-server
+./apply-updates.sh /Servers/BPMS-6.1 eap6.x
 
 ```
+
+5. Jalankan kembali JBoss EAP
+   Jika tidak ada keluaran error berarti proses patching sudah berhasil.
+
 
 Berikut contoh output hasil perintah tersebut:
 
