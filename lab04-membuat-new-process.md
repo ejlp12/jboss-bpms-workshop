@@ -6,6 +6,9 @@ Dalam lab ini kita akan membuat sebuah Business Process Diagram (Process Definit
 
 Process Definition tersebut akan memiliki dua form, form pertama adalah input data (name & description) dan form kedua adalah proses approval dimana pengguna (user) dapat mengubah field description dan menentukan apakah dia akan approve atau reject (tidak approve).
 
+> Asumsi:
+> Anda telah membuat Organizational Unit dengan nama `example`, menggunakan repository bernama `repository2` dan project dengan nama `basicproject`
+
 1.  Login ke Business Central
 2.  Buka Project Authoring perspective (Authoring → Project Authoring).
 3.  Pada Project Explorer (Project Authoring → Project Explorer), pilih project dimana Process definition ingin dibuat.
