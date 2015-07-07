@@ -75,13 +75,19 @@ public class HelloWorkItemHandler implements WorkItemHandler {
 
 5. Buat project baru    
 6. Tambahakan project depedencies
+
    Klik tombol [Add from Repositories], pilih file jar yang sudah kita upload.
+
    Klik tombol [Save]
    
 7. Set Knowledge Base and Sessions
-   Tambahkan Knowledge Base baru, dan Make as default
-   Tambahakan Knowledge Session, [Add], pilih sebagai default, klik Edit
-   Tambahkan Work Item Handlers, [Add], set *Name* dan *Type*, klik Ok
+
+   Tambahkan Knowledge Base baru, dan klik "Make default"
+
+   Tambahakan Knowledge Session, dengan mengkilik tombol [Add], pilih sebagai "default", klik Edit
+
+   Tambahkan Work Item Handlers, dengan mengkilik tombol [Add], lalu set *Name* dan *Type*, klik Ok
+
    Klik tombol [Save]
    
 8.  Tambahakan konfigurasi `WorkDefinitions.wid`
@@ -118,6 +124,11 @@ public class HelloWorkItemHandler implements WorkItemHandler {
     **DIHAPUS**
   ```
   
-  9. Buat Process Definitions
+9. Buat Process Definitions
+
+   Lihat di panel sebelah kiri, anda bisa lihat sebuah Service Task dengan nama "HelloWorld"
+   
+   ![image](https://cloud.githubusercontent.com/assets/3068071/8551234/85240eec-24ff-11e5-948a-28b51a9c7419.png)
+
   
   
