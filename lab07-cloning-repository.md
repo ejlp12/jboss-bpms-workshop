@@ -8,6 +8,8 @@ Untuk mengekspor project yang ada di repository ikuti langkah berikut:
 
 1.  Install GIT di mesin yang anda gunakan
 
+    Untuk Windows bisa download di: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+
 2.  Login ke Busines Central dan akses menu Authoring -> Administration.
 
     Lalu klik perspective menu Repository -> List seperti gambar berikut
