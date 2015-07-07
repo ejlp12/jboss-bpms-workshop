@@ -4,6 +4,8 @@ Buatlah proses seperti ini dengan mengedit proses yang sudah anda buat pada LAB0
 
 ![image](https://cloud.githubusercontent.com/assets/3068071/8538267/5bb6bf02-2494-11e5-9313-5e7cedf4ded1.png)
 
+Setelah selesai coba jalankan dua kali prosesnya dengan salah satunya di-approve dan yang lainnya di-reject (not approve).
+
 Saat task Approve Data anda "approve", maka hasilnya harusnya seperti ini:
 
 ![image](https://cloud.githubusercontent.com/assets/3068071/8539059/9b21c39c-24a0-11e5-9650-b5f6527a26c3.png)
@@ -16,17 +18,18 @@ Sedangkan saat task Approve Data anda "tidak approve", maka hasilnya harusnya se
 
 Berikut clue untuk mengerjakan proses tersebut:
 
-1. Delete node atau arrow (tanda panah)
+1.  Delete node atau arrow (tanda panah)
 
-![image](https://cloud.githubusercontent.com/assets/3068071/8538287/82a206ee-2494-11e5-80fb-f6597bdf3837.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8538287/82a206ee-2494-11e5-80fb-f6597bdf3837.png)
 
-2. Nilai property "Script" dari Script Task
+2.  Nilai property "Script" dari masin-masing Script Task
 
-![image](https://cloud.githubusercontent.com/assets/3068071/8538304/b769b5ca-2494-11e5-8cb2-ec1eaf9847eb.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8538304/b769b5ca-2494-11e5-8cb2-ec1eaf9847eb.png)
 
-3. Nilai property "Expression" dari tanda panah "approve"
+3.  Nilai property "Expression" dari tanda panah "approve". 
 
-![image](https://cloud.githubusercontent.com/assets/3068071/8538315/f3904604-2494-11e5-8e96-1ea9ecd30e76.png)
+    ![image](https://cloud.githubusercontent.com/assets/3068071/8538315/f3904604-2494-11e5-8e96-1ea9ecd30e76.png)
+    
 
-4. Nilai property "Expression" dari tanda panah "not approve" hampir sama dengan diatas tapi diset Condition = "is false"
+4.  Nilai property "Expression" dari tanda panah "not approve" hampir sama dengan diatas tapi diset Condition = "is false"
 
