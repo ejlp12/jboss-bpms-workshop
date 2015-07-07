@@ -1,8 +1,8 @@
 1. Buat Maven Project dengan pom.xml sebagai berikut
 
 
-```
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   ```
+   <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <modelVersion>4.0.0</modelVersion>
         <groupId>org.jugvale.jbpm.workitemhandler</groupId>
@@ -36,19 +36,19 @@
                 </snapshots>
             </repository>
         </repositories>        
-</project>
-```
+   </project>
+   ```
 
 2. Create Work Item Handler
 
-```
-package ejlp.sample;
+   ```
+   package ejlp.sample;
 
-import org.drools.core.process.instance.WorkItemHandler;
-import org.kie.api.runtime.process.WorkItem;
-import org.kie.api.runtime.process.WorkItemManager;
+   import org.drools.core.process.instance.WorkItemHandler;
+   import org.kie.api.runtime.process.WorkItem;
+   import org.kie.api.runtime.process.WorkItemManager;
 
-public class HelloWorkItemHandler implements WorkItemHandler {
+   public class HelloWorkItemHandler implements WorkItemHandler {
 
         public void abortWorkItem(WorkItem wi, WorkItemManager wim) {
                 System.out.println("Oh no, my item aborted..");
@@ -59,10 +59,11 @@ public class HelloWorkItemHandler implements WorkItemHandler {
                 System.out.println("Hello World!");
         }
 
-}
-```
+   }
+   ```
 
 3.  Build project `mvn clean install`
+
     Hasilnya adalah file `hello-workitemhandler-1.0.jar` di direktori `target/`
 
 4.  Login ke Business Central dengan user/role `admin`, lalu akses menu Authoring -> Artifact Repository.
@@ -74,6 +75,7 @@ public class HelloWorkItemHandler implements WorkItemHandler {
     ![image](https://cloud.githubusercontent.com/assets/3068071/8534505/2505afb8-2467-11e5-802f-ea8a1aa3f7e0.png)
 
 5. Buat project baru    
+
 6. Tambahakan project depedencies
 
    Klik tombol [Add from Repositories], pilih file jar yang sudah kita upload.
