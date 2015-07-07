@@ -2,7 +2,8 @@
 
 Setelah selesai mengerjakan **Exercise01**, coba ubah agar proses menjadi seperti ini:
 
-* Setelah task "Approve Data",  akan ada dua Task yang harus dijalankan bersamaan (parallel)
+* Setelah task "Approve Data",  akan ada dua Task yang harus dijalankan bersamaan (parallel).
+  Kedua task tersebut akan dijalankan apapun hasil approval (approve maupun tidak approve maka dua task berikutnya akan dieksekusi) 
 
 * Untuk memudahkan, buatlah kedua Task tersebut sebagai Script Task, dengan masing-masing mengluarkan output di Console Window
   1. Script Task #1 dengan nama "Kirim Email", mengeluarkan ouput "** EMAIL TERKIRIM **"
