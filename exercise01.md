@@ -6,7 +6,7 @@ Buatlah proses seperti ini dengan mengedit proses yang sudah anda buat pada LAB0
 
 Saat task Approve Data anda "approve", maka hasilnya harusnya seperti ini:
 
-![image](https://cloud.githubusercontent.com/assets/3068071/8538315/f3904604-2494-11e5-8e96-1ea9ecd30e76.png)
+![image](https://cloud.githubusercontent.com/assets/3068071/8539059/9b21c39c-24a0-11e5-9650-b5f6527a26c3.png)
 
 Sedangkan saat task Approve Data anda "tidak approve", maka hasilnya harusnya seperti ini:
 
