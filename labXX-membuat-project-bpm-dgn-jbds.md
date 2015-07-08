@@ -5,8 +5,11 @@
 
 
 Pilih File → New → Other...
+
 Pilih jBPM → BPMN2 Process.
+
 Pada dialog box yang muncul, tentukan lokasi direktori `<PROJECT_DIR>/src/main/resources/` dan nama file dari proses yang akan kita buat. Berinama `simple-process`
+
 Setelah terbuat, proses diagram BPMN2 akan terbuka dan kita siap untuk menedit pada graphical process designer.
 
 
