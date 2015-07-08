@@ -1,4 +1,4 @@
-## Instalasi JBoss Developer Studio 
+## Instalasi JBoss Developer Studio dan JBoss Developer Studio Integration Stack
 
 Ikuti cara instalasi di dokumen ini:
 
