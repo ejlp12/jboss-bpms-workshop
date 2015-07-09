@@ -2,7 +2,7 @@ GIT Repository pada JBoss BPM Suite 6.1 secara default akan membuka port hanya u
 
 Kalau anda mencoba melakukan **koneksi dari IP address lain akan ditolak**.
 
-Untuk membuat Git Repository bisa diakses dari IP address lain maka perubahan konfigurasi yaitu menambahkan system propoerti di file konfigurasi JBoss EAP yaitu di `standalone.xml` atau 1standalone-[[full]-ha]].xml`
+Untuk membuat Git Repository bisa diakses dari IP address lain maka perubahan konfigurasi yaitu menambahkan system propoerti di file konfigurasi JBoss EAP yaitu di `standalone.xml` atau `standalone-[[full]-ha]].xml` atau `host.xml`
 
 Tambahan pada tag `<system-properties>`
 
