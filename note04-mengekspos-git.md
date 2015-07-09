@@ -6,9 +6,12 @@ Untuk membuat Git Repository bisa diakses dari IP address lain maka perubahan ko
 
 Tambahan pada tag `<system-properties>`
 
-```
-<property name="org.uberfire.nio.git.daemon.host" value="ip_address"/>
-<property name="org.uberfire.nio.git.ssh.host" value="ip_address"/>
+```xml
+<system-properties>
+  ...
+  <property name="org.uberfire.nio.git.daemon.host" value="ip_address"/>
+  <property name="org.uberfire.nio.git.ssh.host" value="ip_address"/>
+</system-properties>
 ```
 
 Lalu **restart** JBoss BPMS
