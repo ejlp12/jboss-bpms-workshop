@@ -66,13 +66,14 @@ Ubah/tambahkan kode Java dari class `ejlp.sample.Main` agar task terakhir yang d
       Task task = taskService.getTaskById(TASK_ID);
 		  if (task.getTaskData().getStatus() == Status.Ready) {
 			
-				taskService.claim(TASK_ID, "user01");
-				taskService.start(TASK_ID, "user01");
+				taskService.claim(TASK_ID, "user01"); // Status jadi apa?
+				
+				taskService.start(TASK_ID, "user01"); // Statis jadi apa?
 			
 				Map<K, V> out_params = new HashMap<>();
 				out_params.put("out_approve", new Boolean(true));
 			
-				taskService.complete(TASK_ID, "user01", out_params);
+				taskService.complete(TASK_ID, "user01", out_params); // Status jadi apa?
 			
 			}
 			```
