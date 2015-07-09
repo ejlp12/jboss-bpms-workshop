@@ -62,19 +62,19 @@ Ubah/tambahkan kode Java dari class `ejlp.sample.Main` agar task terakhir yang d
 
       
       ```
-      long TASK_ID = 100; // Coba Task ID yang terlihat di Task List di Business Central
-		Task task = taskService.getTaskById(TASK_ID);
-		(task.getTaskData().getStatus() == Status.Ready) {
+      long TASK_ID = 100; // Cobalah sebuah Task ID yang terlihat di Task List di Business Central
+      Task task = taskService.getTaskById(TASK_ID);
+		  if (task.getTaskData().getStatus() == Status.Ready) {
 			
-			taskService.claim(TASK_ID, "user01");
-			taskService.start(TASK_ID, "user01");
+				taskService.claim(TASK_ID, "user01");
+				taskService.start(TASK_ID, "user01");
 			
-			Map<K, V> out_params = new HashMap<>();
-			out_params.put("out_approve", new Boolean(true));
+				Map<K, V> out_params = new HashMap<>();
+				out_params.put("out_approve", new Boolean(true));
 			
-			taskService.complete(TASK_ID, "user01", );
+				taskService.complete(TASK_ID, "user01", out_params);
 			
-		}
-		```
+			}
+			```
 
   
