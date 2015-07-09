@@ -53,7 +53,7 @@ Ubah/tambahkan kode Java dari class `ejlp.sample.Main` agar task terakhir yang d
 1. Gunakan google.com :-)
 2. Lihat User Task status lifecycle berikut:
 
-   ![image](https://docs.jboss.org/jbpm/v6.2/userguide/images/TaskService/WSHT-lifecycle.png)
+   ![image](https://cloud.githubusercontent.com/assets/3068071/8587478/a19311c2-2626-11e5-8d7c-184ef03bed51.png)
    
 3. Lihat dokumentasi.
 
@@ -64,9 +64,9 @@ Ubah/tambahkan kode Java dari class `ejlp.sample.Main` agar task terakhir yang d
       ```
       long TASK_ID = 100; // Cobalah sebuah Task ID yang terlihat di Task List di Business Central
       Task task = taskService.getTaskById(TASK_ID);
-		  if (task.getTaskData().getStatus() == Status.Ready) {
+      if (task.getTaskData().getStatus() == Status.Ready) {
 			
-				taskService.claim(TASK_ID, "user01");
+        taskService.claim(TASK_ID, "user01");
 				// [1] Status jadi apa?
 				
 				taskService.start(TASK_ID, "user01"); 
@@ -81,6 +81,25 @@ Ubah/tambahkan kode Java dari class `ejlp.sample.Main` agar task terakhir yang d
 			}
 			```
 
+5. Jawaban:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1] Reserved
+[2] In-Progress
+[3] Completed
 
 
 
