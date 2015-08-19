@@ -51,7 +51,7 @@
    public class HelloWorkItemHandler implements WorkItemHandler {
 
         public void abortWorkItem(WorkItem wi, WorkItemManager wim) {
-                System.out.println("Oh no, my item aborted..");
+                System.out.println("Oh no, my item aborted.." + wi.getParameter("yourname")););
 
         }
 
@@ -97,10 +97,15 @@
     ```
       [
         "name" : "TestWorkItemHandler",
+        "parameters" : [
+          "yourname" : new StringDataType()
+        ],
         "displayName" : "HelloWorld",
         "icon" : "defaultemailicon.gif"
       ] ,
     ```
+    
+    sehingga menjadi seperti ini
     
     ```
     import org.drools.core.process.core.datatype.impl.type.StringDataType;
@@ -123,11 +128,16 @@
       "displayName" : "Email",
       "icon" : "defaultemailicon.gif"
     ],
-    **DIHAPUS**
+    
+    *****DIHAPUS SUPAYA TIDAK TERLALU PANJANG TAMPIL DISINI*****
   ```
+  
+  Save.
   
 9. Buat Process Definitions
 
+   Buat sebuah Process Definition.
+   
    Lihat di panel sebelah kiri, anda bisa lihat sebuah Service Task dengan nama "HelloWorld"
    
    ![image](https://cloud.githubusercontent.com/assets/3068071/8551234/85240eec-24ff-11e5-948a-28b51a9c7419.png)
