@@ -1,3 +1,6 @@
+Setiap bagian view di Business Central dapat ditampilkan terpisah, untuk dapat di-__embed__ di aplikasi lain.
+Berikut beberapa cara untuk mendapatkan beberapa tampilan tersebut:
+
 
 * Menampilkan fragmen dari Task List
 
