@@ -27,9 +27,10 @@ Berikut contoh output hasil perintah tersebut:
 
 
 Detail informasi patch ini bisa dilihat di:
-Red Hat JBoss BPM Suite 6.1 Update 1 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38283
-Red Hat JBoss BPM Suite 6.1 Update 2 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38993
-Red Hat JBoss BPM Suite 6.1 Update 3 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=39991
+
+   Red Hat JBoss BPM Suite 6.1 Update 1 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38283
+   Red Hat JBoss BPM Suite 6.1 Update 2 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38993
+   Red Hat JBoss BPM Suite 6.1 Update 3 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=39991
 
 
 
