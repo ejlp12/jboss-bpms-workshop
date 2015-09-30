@@ -1,20 +1,23 @@
-## Instalasi Patch JBoss BPM Suite 6.1.1
+## Instalasi Patch JBoss BPM Suite 6.1.3
 
-Asumsi anda menginstall JBoss BPM Suite versi 6.1.0 di direktori `/Servers/BPMS-6.1/`, berikut langkah-langkah untuk menginstal patch **6.1.1**
+Asumsi anda menginstall JBoss BPM Suite versi 6.1.0 di direktori `/Servers/BPMS-6.1/`, berikut langkah-langkah untuk menginstal patch **6.1.3**
 
 1. Download patch file dari http://access.redhat.com
-2. Ekstrak `jboss-bpmsuite-6.1.1-patch.zip`, misalnya di `/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch`
+2. Ekstrak `jboss-bpmsuite-6.1.3-patch.zip`, misalnya di `/Installer/BPMS_6.1/jboss-bpmsuite-6.1.3-patch`
+   Ada baiknya anda baca dulu file `README.txt` yang ada di dalam direktori hasil ekstrak tersebut.
+   Baca juga [dokumentasi untuk patch](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_BPM_Suite/6.1/html/Installation_Guide/chap-Patching_and_Upgrading_Red_Hat_JBoss_BPM_Suite.html)
 3. Stop JBoss BPMS jika sedang jalan
 4. Lalu jalankan perintah berikut:
 
 ```
-cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
+cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.3-patch
+./apply-updates.sh /Servers/BPMS-6.1 eap6.x
 ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/business-central.war eap6.x-bc
 ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
-./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/kie-server.war generic-kie-server
-./apply-updates.sh /Servers/BPMS-6.1 eap6.x
-
+./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/kie-server.war eap6.x-kie-server
 ```
+
+Output hasil masing-masing perintah diatas bisa dilihat dibagian paling bawah artikel ini.
 
 5. Jalankan kembali JBoss EAP
    Jika tidak ada keluaran error berarti proses patching sudah berhasil.
@@ -22,113 +25,58 @@ cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
 
 Berikut contoh output hasil perintah tersebut:
 
+
+Detail informasi patch ini bisa dilihat di:
+Red Hat JBoss BPM Suite 6.1 Update 1 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38283
+Red Hat JBoss BPM Suite 6.1 Update 2 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38993
+Red Hat JBoss BPM Suite 6.1 Update 3 - https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=39991
+
+
+
+### Output
+
+Berikut output dari hasil 
+
 ```
 ________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:~
-| => cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
+$ cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.3-patch/
 ________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:~/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-| => ls -l
-total 24
--rw-rw-r--@  1 ejlp12  staff  1174 May 28 20:39 README.txt
--rw-rw-r--@  1 ejlp12  staff  1439 May 28 20:39 apply-updates.bat
--rw-r--r--   1 ejlp12  staff  3107 Jul  6 12:04 apply-updates.log
--rwxr-xr-x@  1 ejlp12  staff  1335 May 28 20:39 apply-updates.sh
-drwxr-xr-x   6 ejlp12  staff   204 Jul  6 12:04 backup
--rw-r--r--@  1 ejlp12  staff  4357 May 28 20:32 blacklist.txt
-drwxr-xr-x@  3 ejlp12  staff   102 May 28 20:39 conf
-drwxr-xr-x@  9 ejlp12  staff   306 May 28 20:39 libs
-drwxr-xr-x@ 10 ejlp12  staff   340 May 28 20:39 updates
-________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-| => ./apply-updates.sh
+$ ./apply-updates.sh /Servers/BPMS-6.1-NEW eap6.x
 Using Java binary found at /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin/java
-11:34:16.211 [main] ERROR - Incorrect arguments specified! The program expects two mandatory parameters: <path-to-distribution> and <type-of-distribution>!
-
-Usage: apply-updates.[sh|bat] <path-to-distribution-root> <type-of-distribution>
-Description: JBoss BRMS/BPM Suite client patching tool used to apply updates to existing installations.
-
-IMPORTANT: Do not apply the updates to running applications. Shutdown the server first.
-
-Supported distribution types:
-	 - eap6.x
-	 - eap6.x-bc
-	 - eap6.x-dashbuilder
-	 - eap6.x-kie-server
-	 - generic
-	 - generic-bc
-	 - generic-dashbuilder
-	 - generic-kie-server
-	 - was8
-	 - was8-bc
-	 - was8-dashbuilder
-	 - was8-kie-server
-	 - wls12c
-	 - wls12c-bc
-	 - wls12c-dashbuilder
-	 - wls12c-kie-server
-	 - bpmsuite-engine
-	 - planner-engine
-	 - supplementary-tools
-	 - integration-pack
-
-Examples:
-	Patch EAP 6.x Business Central WAR:
-		./apply-updates.[sh|bat] <some-path>/jboss-eap-6.4/standalone/deployments/business-central.war eap6.x-bc
-
-	Patch Generic KIE Server WAR:
-		./apply-updates.[sh|bat] <some-path-to-tomcat-home>/webapps/kie-server.war generic-kie-server
-
-	Patch whole WebLogic 12c bundle:
-		./apply-updates.[sh|bat] <path-to-unzipped-wls12c-bundle> wls12c
-
-	Patch Planner engine bundle:
-		./apply-updates.[sh|bat] <path-to-unzipped-planner-bundle> planner-engine
-
-Notes:
-  - Working dir needs to be the directory of this script!
-  - Java is recommended to be JDK and version 6 or later
-  - The environment variable JAVA_HOME should be set to the JDK installation directory
-      For example (linux): export JAVA_HOME=/usr/lib/jvm/java-6-sun
-      For example (mac): export JAVA_HOME=/Library/Java/Home
+22:25:29.131 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.3-patch/blacklist.txt.
+22:25:29.146 [main] INFO  - Directory /Servers/BPMS-6.1-NEW is valid distribution root.
+22:25:29.146 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1-NEW to ./backup/2015-09-30-10-25-29/eap6.x.
+22:25:46.444 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1-NEW
+22:25:59.672 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1-NEW
+22:26:03.052 [main] WARN  - File standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
+22:26:03.610 [main] WARN  - File standalone/deployments/business-central.war/WEB-INF/classes/workbench-policy.properties is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
+22:26:04.094 [main] WARN  - File standalone/deployments/business-central.war/WEB-INF/web-ui-server.xml is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
+22:26:04.097 [main] WARN  - File standalone/deployments/business-central.war/WEB-INF/web.xml is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
 ________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-| => ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/business-central.war eap6.x-bc
+$  ./apply-updates.sh /Servers/BPMS-6.1-NEW/standalone/deployments/business-central.war eap6.x-bc
 Using Java binary found at /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin/java
-11:36:20.404 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.1-patch/blacklist.txt.
-11:36:20.417 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1/standalone/deployments/business-central.war to ./backup/2015-07-06-11-36-20/eap6.x-bc.
-11:36:25.506 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1/standalone/deployments/business-central.war
-11:36:27.758 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1/standalone/deployments/business-central.war
+22:26:32.164 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.3-patch/blacklist.txt.
+22:26:32.174 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1-NEW/standalone/deployments/business-central.war to ./backup/2015-09-30-10-26-32/eap6.x-bc.
+22:26:38.034 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1-NEW/standalone/deployments/business-central.war
+22:26:41.215 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1-NEW/standalone/deployments/business-central.war
+22:26:43.690 [main] WARN  - File WEB-INF/classes/ErraiApp.properties is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
+22:26:44.030 [main] WARN  - File WEB-INF/classes/workbench-policy.properties is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
+22:26:44.197 [main] WARN  - File WEB-INF/web-ui-server.xml is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
+22:26:44.199 [main] WARN  - File WEB-INF/web.xml is on blacklist, creating a new file with suffix .new instead of overwriting. Please investigate the differences and apply them manually.
 ________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-| => ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
+$  ./apply-updates.sh /Servers/BPMS-6.1-NEW/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
 Using Java binary found at /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin/java
-12:02:10.870 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.1-patch/blacklist.txt.
-12:02:10.880 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war to ./backup/2015-07-06-12-02-10/eap6.x-dashbuilder.
-12:02:12.169 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war
-12:02:13.342 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war
+22:26:57.959 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.3-patch/blacklist.txt.
+22:26:57.968 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1-NEW/standalone/deployments/dashbuilder.war to ./backup/2015-09-30-10-26-57/eap6.x-dashbuilder.
+22:26:59.158 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1-NEW/standalone/deployments/dashbuilder.war
+22:27:00.631 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1-NEW/standalone/deployments/dashbuilder.war
 ________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-| => ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/kie-server.war generic-kie-server
+$  ./apply-updates.sh /Servers/BPMS-6.1-NEW/standalone/deployments/kie-server.war eap6.x-kie-server
 Using Java binary found at /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin/java
-12:03:54.624 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.1-patch/blacklist.txt.
-12:03:54.633 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1/standalone/deployments/kie-server.war to ./backup/2015-07-06-12-03-54/generic-kie-server.
-12:03:54.902 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1/standalone/deployments/kie-server.war
-12:03:55.144 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1/standalone/deployments/kie-server.war
-________________________________________________________________________________
-| ejlp12 @ ejlp-macbook:/Installer/BPMS_6.1/jboss-bpmsuite-6.1.1-patch
-| => ./apply-updates.sh /Servers/BPMS-6.1 eap6.x
-Using Java binary found at /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin/java
-12:04:26.408 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.1-patch/blacklist.txt.
-12:04:26.420 [main] INFO  - Directory /Servers/BPMS-6.1 is valid distribution root.
-12:04:26.420 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1 to ./backup/2015-07-06-12-04-26/eap6.x.
-12:04:40.845 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1
-12:04:50.269 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1
+22:27:42.773 [main] INFO  - File blacklist.txt found at /Users/ejlp12/Documents/03_RH_JBOSS_INSTALLER/BPMS_6.1/jboss-bpmsuite-6.1.3-patch/blacklist.txt.
+22:27:42.780 [main] INFO  - Backing-up (copying) contents of directory /Servers/BPMS-6.1-NEW/standalone/deployments/kie-server.war to ./backup/2015-09-30-10-27-42/eap6.x-kie-server.
+22:27:43.116 [main] INFO  - Removing old files from distribution root /Servers/BPMS-6.1-NEW/standalone/deployments/kie-server.war
+22:27:43.323 [main] INFO  - Applying updates to distribution root /Servers/BPMS-6.1-NEW/standalone/deployments/kie-server.war
+
 ```
 
-
-Detail informasi patch ini bisa dilihat di: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=38283&product=bpm.suite&version=6.1.0&downloadType=patches
-
-Berikut daftar bug fixes ataupun changes pada versi 6.1.1:
-
-![image](https://cloud.githubusercontent.com/assets/3068071/8517279/75601300-23e9-11e5-9f43-b9b8dd763808.png)
