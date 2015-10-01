@@ -9,17 +9,25 @@ Asumsi anda menginstall JBoss BPM Suite versi 6.1.0 di direktori `/Servers/BPMS-
 3. Stop JBoss BPMS jika sedang jalan
 4. Lalu jalankan perintah berikut:
 
-```
-cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.3-patch
-./apply-updates.sh /Servers/BPMS-6.1 eap6.x
-./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/business-central.war eap6.x-bc
-./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
-./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/kie-server.war eap6.x-kie-server
-```
+    ```
+    cd /Installer/BPMS_6.1/jboss-bpmsuite-6.1.3-patch
+    ./apply-updates.sh /Servers/BPMS-6.1 eap6.x
+    ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/business-central.war eap6.x-bc
+    ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/dashbuilder.war eap6.x-dashbuilder
+    ./apply-updates.sh /Servers/BPMS-6.1/standalone/deployments/kie-server.war eap6.x-kie-server
+    ```
 
 Output hasil masing-masing perintah diatas bisa dilihat dibagian paling bawah artikel ini.
 
-5. Jalankan kembali JBoss EAP
+5. Jika tidak anda tidak pernah mengubah file `ErraiApp.properties` maka jalankan perintah berikut:
+
+    ```
+    mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties.old
+
+    mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties.new $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties
+    ```
+
+6. Jalankan kembali JBoss EAP
    Jika tidak ada keluaran error berarti proses patching sudah berhasil.
 
 
