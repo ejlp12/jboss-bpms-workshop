@@ -23,8 +23,13 @@ Output hasil masing-masing perintah diatas bisa dilihat dibagian paling bawah ar
 
     ```
     mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties.old
-
     mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties.new $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/ErraiApp.properties
+    
+    mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web-ui-server.xml $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web-ui-server.xml.old
+    mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web-ui-server.xml.new $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web-ui-server.xml
+    
+    mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web.xml $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web.old
+    mv $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web.xml.new $JBOSS_HOME/standalone/deployments/business-central.war/WEB-INF/web.xml
     ```
 
 6. Jalankan kembali JBoss EAP
