@@ -114,6 +114,9 @@
     [
       [
         "name" : "TestWorkItemHandler",
+        "parameters" : [
+          "yourname" : new StringDataType()
+      ],        
         "displayName" : "HelloWorld",
         "icon" : "defaultemailicon.gif"
       ] ,
