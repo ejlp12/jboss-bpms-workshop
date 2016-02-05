@@ -1,11 +1,12 @@
-1. Buat Maven Project dengan pom.xml sebagai berikut
+1. Buat Maven Project di Eclipse (JBDS) dengan `pom.xml` sebagai berikut:
 
+   > Catatan: Saya menggunakan JBoss BPM versi 6.2.1
 
    ```
    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <modelVersion>4.0.0</modelVersion>
-        <groupId>org.jugvale.jbpm.workitemhandler</groupId>
+        <groupId>ejlp.sample.workitemhandler</groupId>
         <artifactId>hello-workitemhandler</artifactId>
         <version>1.0</version>
         <name>Hello WorlItemHandler</name>
@@ -39,7 +40,7 @@
    </project>
    ```
 
-2. Create Work Item Handler
+2. Buat sebuah class yang akan menjadi Custom Service Task yang kita sebut  Work Item Handler 
 
    ```
    package ejlp.sample;
@@ -51,12 +52,12 @@
    public class HelloWorkItemHandler implements WorkItemHandler {
 
         public void abortWorkItem(WorkItem wi, WorkItemManager wim) {
-                System.out.println("Oh no, my item aborted.." + wi.getParameter("yourname")););
+                System.out.println("Oh no, my item aborted.." + wi.getParameter("yourname") );
 
         }
 
         public void executeWorkItem(WorkItem wi, WorkItemManager wim) {
-                System.out.println("Hello World!");
+                System.out.println("Hello " + + wi.getParameter("yourname") );
         }
 
    }
@@ -92,50 +93,23 @@
 
    Klik tombol [Save]
    
-8.  Tambahakan konfigurasi `WorkDefinitions.wid`
+8.  Tambahakan konfigurasi `WorkDefinitions.wid` dengan teks berikut:
 
-    ```
+   ```
       [
-        "name" : "TestWorkItemHandler",
-        "parameters" : [
-          "yourname" : new StringDataType()
-        ],
-        "displayName" : "HelloWorld",
-        "icon" : "defaultemailicon.gif"
-      ] ,
-    ```
-    
-    sehingga menjadi seperti ini
-    
-    ```
-    import org.drools.core.process.core.datatype.impl.type.StringDataType;
-    import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
-
-    [
-      [
-        "name" : "TestWorkItemHandler",
+        "name" : "HelloWorld",
         "parameters" : [
           "yourname" : new StringDataType()
       ],        
         "displayName" : "HelloWorld",
         "icon" : "defaultemailicon.gif"
       ] ,
-      [
-        "name" : "Email",
-        "parameters" : [
-          "From" : new StringDataType(),
-          "To" : new StringDataType(),
-          "Subject" : new StringDataType(),
-          "Body" : new StringDataType()
-      ],
-      "displayName" : "Email",
-      "icon" : "defaultemailicon.gif"
-    ],
-    
-    *****DIHAPUS SUPAYA TIDAK TERLALU PANJANG TAMPIL DISINI*****
-  ```
+   ```
+   Sehingga menjadi seperti ini:
+   
+   ![image](https://cloud.githubusercontent.com/assets/3068071/12844133/291aba1e-cc30-11e5-861d-e50f7095fccd.png)
   
-  Save.
+   Kemudian kilik tombol Save.
   
 9. Buat Process Definitions
 
