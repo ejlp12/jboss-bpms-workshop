@@ -40,7 +40,7 @@
    </project>
    ```
 
-2. Buat sebuah class yang akan menjadi Custom Service Task yang kita sebut  Work Item Handler 
+2. Buat sebuah Java class yang akan menjadi Custom Service Task yang kita sebut  Work Item Handler 
 
    ```
    package ejlp.sample;
@@ -57,7 +57,7 @@
         }
 
         public void executeWorkItem(WorkItem wi, WorkItemManager wim) {
-                System.out.println("Hello " + + wi.getParameter("yourname") );
+                System.out.println("Hello " + wi.getParameter("yourname") );
         }
 
    }
@@ -83,17 +83,7 @@
 
    Klik tombol [Save]
    
-7. Set Knowledge Base and Sessions
-
-   Tambahkan Knowledge Base baru, dan klik "Make default"
-
-   Tambahakan Knowledge Session, dengan mengkilik tombol [Add], pilih sebagai "default", klik Edit
-
-   Tambahkan Work Item Handlers, dengan mengkilik tombol [Add], lalu set *Name* dan *Type*, klik Ok
-
-   Klik tombol [Save]
-   
-8.  Tambahakan konfigurasi `WorkDefinitions.wid` dengan teks berikut:
+7.  Tambahakan konfigurasi `WorkDefinitions.wid` dengan teks berikut:
 
    ```
       [
@@ -109,9 +99,9 @@
    
    ![image](https://cloud.githubusercontent.com/assets/3068071/12844133/291aba1e-cc30-11e5-861d-e50f7095fccd.png)
   
-   Kemudian kilik tombol Save.
+   Kemudian kilik tombol [Save].
   
-9. Buat Process Definitions
+8. Buat Process Definitions
 
    Buat sebuah Process Definition.
    
@@ -119,5 +109,22 @@
    
    ![image](https://cloud.githubusercontent.com/assets/3068071/8551234/85240eec-24ff-11e5-948a-28b51a9c7419.png)
 
-  
+9. Buka project editor dengan mengklik tombol [Open Project Editor] di project explorer
+
+   ![image](https://cloud.githubusercontent.com/assets/3068071/12844410/b37bf5f0-cc31-11e5-9399-83c3c0685a61.png)
+   
+   Set Knowledge Base and Sessions
+
+   Tambahkan Knowledge Base baru dan berinama `EjlpKBase` (sembarang nama), dan klik "Make default"
+   
+   ![image](https://cloud.githubusercontent.com/assets/3068071/12844495/3b6f9fe8-cc32-11e5-8cda-8c151331ffea.png)
+
+   Tambahakan Knowledge Session, dengan mengkilik tombol [Add], dan berinama `EjlpKSession` (sembarang nama) kemudian pilih sebagai "default", klik Edit
+   
+
+   Tambahkan Work Item Handlers, dengan mengkilik tombol [Add], lalu set *Name* `HelloWorld` dan *Type* `ejlp.sample.HelloWorkItemHandler`, klik Ok
+   
+   ![image](https://cloud.githubusercontent.com/assets/3068071/12844544/83a09baa-cc32-11e5-8c3b-aa5098835cb4.png)
+
+   Klik tombol [Save]  
   
