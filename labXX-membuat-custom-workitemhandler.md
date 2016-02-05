@@ -138,6 +138,12 @@
     
     kemudian klik [Build] > [Build and Deploy]
     
+   Deploy gagal?
+   
+11. Deploy (LAGI) 
+
+    ![image](https://cloud.githubusercontent.com/assets/3068071/12845558/4e5e5e3a-cc39-11e5-8ed6-50f4d7f8633d.png)
+    
     ![image](https://cloud.githubusercontent.com/assets/3068071/12845090/1544fc38-cc36-11e5-81f2-160e356eedc9.png)
 
     ![image](https://cloud.githubusercontent.com/assets/3068071/12845080/02f05df2-cc36-11e5-8347-8d5e69b546c0.png)
@@ -146,3 +152,7 @@
     
     ![image](https://cloud.githubusercontent.com/assets/3068071/12845171/c8667ec2-cc36-11e5-80e4-aa97f0cfc30b.png)
 
+
+Test
+
+![image](https://cloud.githubusercontent.com/assets/3068071/12845439/7385ad54-cc38-11e5-9527-9c921ad6b4e2.png)
