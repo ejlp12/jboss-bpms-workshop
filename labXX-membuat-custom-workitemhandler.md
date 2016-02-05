@@ -113,7 +113,8 @@
 
    ![image](https://cloud.githubusercontent.com/assets/3068071/12844410/b37bf5f0-cc31-11e5-9399-83c3c0685a61.png)
    
-   Set Knowledge Base and Sessions
+   kilik tombol [Knowledge Base Settings: Project General Setting] lalu pilih "Knowledge bases and sessions"
+   
 
    Tambahkan Knowledge Base baru dan berinama `EjlpKBase` (sembarang nama), dan klik "Make default"
    
@@ -121,10 +122,27 @@
 
    Tambahakan Knowledge Session, dengan mengkilik tombol [Add], dan berinama `EjlpKSession` (sembarang nama) kemudian pilih sebagai "default", klik Edit
    
-
    Tambahkan Work Item Handlers, dengan mengkilik tombol [Add], lalu set *Name* `HelloWorld` dan *Type* `ejlp.sample.HelloWorkItemHandler`, klik Ok
    
    ![image](https://cloud.githubusercontent.com/assets/3068071/12844544/83a09baa-cc32-11e5-8c3b-aa5098835cb4.png)
 
-   Klik tombol [Save]  
+   Klik tombol [Ok]  
   
+   Klik tombol [Save] di kanan atas.
+   
+10. Deploy project.
+
+    Kembali ke "Project General Setting"
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/12845028/a67baf18-cc35-11e5-9c86-874c0f9ff7af.png)
+    
+    kemudian klik [Build] > [Build and Deploy]
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/12845090/1544fc38-cc36-11e5-81f2-160e356eedc9.png)
+
+    ![image](https://cloud.githubusercontent.com/assets/3068071/12845080/02f05df2-cc36-11e5-8347-8d5e69b546c0.png)
+    
+    Hasilnya bisa dilihat dengan seperti dibawah ini. Klik menu Deploy > Process Deployment
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/12845171/c8667ec2-cc36-11e5-80e4-aa97f0cfc30b.png)
+
