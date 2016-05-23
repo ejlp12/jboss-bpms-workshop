@@ -14,10 +14,12 @@ Tambahan pada tag `<system-properties>`
 </system-properties>
 ```
 
-> PERHATIAN: Jika anda ingin meng-clone repository dan melakukan offline diting kemudian commit, maka anda harus clone menggunakan SSH.
-> Clone menggunakan GIT URL hanya bersifat READ ONLY!
-
 Lalu **restart** JBoss BPMS
+
+
+> PERHATIAN: Jika anda ingin meng-clone repository dan melakukan offline diting kemudian commit, maka anda harus clone menggunakan SSH.
+> **Clone menggunakan GIT URL hanya bersifat READ ONLY!**
+
 
 Konfigurasi lainnya bisa dilihat di [http://docs.jboss.org/jbpm/v6.2/userguide/wb.Workbench.html#wb.systemProperties](http://docs.jboss.org/jbpm/v6.2/userguide/wb.Workbench.html#wb.systemProperties)
 
