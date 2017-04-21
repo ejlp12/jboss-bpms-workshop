@@ -17,3 +17,20 @@ Buatlah proses diagram dengan kasus seperti ini:
 5. Keberatan dari Klien harus melalui persetujuan user C.  Keputusan user C dapat mengubah nilai persetujuan yaitu dari "not approve" menjadi "approve"
 
 
+
+
+
+
+
+
+
+[Clue]
+
+https://docs.jboss.org/jbpm/v6.0/userguide/jBPMBPMN2.html#d0e3180
+
+![image](https://cloud.githubusercontent.com/assets/3068071/25266623/febb5f90-269b-11e7-883a-42b28a328d1c.png)
+
+
+
+
+
