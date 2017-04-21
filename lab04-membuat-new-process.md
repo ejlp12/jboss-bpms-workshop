@@ -25,7 +25,6 @@ Process Definition tersebut akan memiliki dua form, form pertama adalah input da
     ![image](https://cloud.githubusercontent.com/assets/3068071/8490872/6970ab22-215a-11e5-9f3e-4f1feec56dbf.png)
     
 6.   Akan muncul sebuah Business Process view, dengan tab "Process Modeling" **canvas** seperti ini
-    
     ![image](https://cloud.githubusercontent.com/assets/3068071/8490906/2e0bcb7e-215b-11e5-85dd-fd5118ec44a6.png)
     
     Canvas tersebut kita gunakan untuk membuat diagram BPMN.
