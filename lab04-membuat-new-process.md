@@ -26,6 +26,7 @@ Process Definition tersebut akan memiliki dua form, form pertama adalah input da
     
 6.   Akan muncul sebuah Business Process view, dengan tab "Process Modeling" **canvas** seperti ini
     ![image](https://cloud.githubusercontent.com/assets/3068071/8490906/2e0bcb7e-215b-11e5-85dd-fd5118ec44a6.png)
+    
     Canvas tersebut kita gunakan untuk membuat diagram BPMN.
     Klik tombol bertanda << di bagian kanan atas untuk melihat properties dari BPMN-Diagram, tanda << akan merubah menjadi >>
     
