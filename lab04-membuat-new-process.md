@@ -1,6 +1,6 @@
 ## Membuat New Business Process Definition
 
-Dalam lab ini kita akan membuat sebuah Business Process Diagram (Process Definition) sederhana yang hasil akhirnya seperti ini:
+Dalam lab ini kita akan membuat sebuah Business Process Diagram (Process Definition) sangat-sederhana yang hasil akhirnya seperti ini:
 
 ![image](https://cloud.githubusercontent.com/assets/3068071/8491337/ee93c63a-2160-11e5-913c-30e45cbaee95.png)
 
