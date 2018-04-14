@@ -62,7 +62,7 @@ Process Definition tersebut akan memiliki dua form, form pertama adalah input da
     
   Akan muncul editor untuk variable definitions, buatlah ketiga variable berikut dengan mengklik tombol "Add Variable" dibagian atas. Kemudian klik tombol Ok
     
-    ![image](https://cloud.githubusercontent.com/assets/3068071/8491245/2454db2a-2160-11e5-81e3-e7a4ca42acbb.png)
+   ![image](https://cloud.githubusercontent.com/assets/3068071/8491245/2454db2a-2160-11e5-81e3-e7a4ca42acbb.png)
     
     
 ### Menset lebih lanjut properties dari User Task    
